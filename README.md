@@ -5,7 +5,7 @@ Easiest way to install is by using DDEV. After the commands below you can view t
 ```
 composer install
 ddev start
-ddev import-db --src db.sql
+ddev import-db --src web/db.sql.gz
 ```
 
 Two users are already created.
