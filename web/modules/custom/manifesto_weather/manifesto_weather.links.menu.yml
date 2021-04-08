@@ -1,0 +1,5 @@
+manifesto_weather.weather_configuration_form:
+  title: 'Weather API'
+  route_name: manifesto_weather.weather_api_form
+  description: 'Configure the weather API settings.'
+  parent: system.admin_config_services

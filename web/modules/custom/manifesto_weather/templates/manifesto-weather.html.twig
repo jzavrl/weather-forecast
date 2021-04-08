@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default theme implementation for the weather forecast widget.
+ *
+ * Available variables:
+ * - forecast: The current forecast string.
+ *
+ * @see manifesto_weather_preprocess_manifesto_weather()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% if forecast %}
+  {{ 'Current forecast: @forecast.'|t({'@forecast': forecast}) }}
+{% endif %}

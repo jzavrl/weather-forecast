@@ -1,0 +1,3 @@
+manage weather api configuration:
+  title: 'Manage weather API configuration'
+  description: 'Allow access to the weather API management form and settings.'

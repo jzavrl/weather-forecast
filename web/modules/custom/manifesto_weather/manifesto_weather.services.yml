@@ -1,0 +1,16 @@
+services:
+  logger.channel.manifesto_weather:
+    parent: logger.channel_base
+    arguments: ['manifesto_weather']
+  manifesto_weather.weather_manager:
+    class: Drupal\manifesto_weather\WeatherManager
+    arguments: ['@http_client', '@config.manager', '@state', '@logger.factory']
+  manifesto_weather.weather_forecast_extra_field_info:
+    class: Drupal\manifesto_weather\EventSubscriber\Field\WeatherForecastExtraFieldInfoSubscribers
+    tags:
+      - { name: event_subscriber }
+  manifesto_weather.weather_forecast_entity_view:
+    class: Drupal\manifesto_weather\EventSubscriber\Entity\WeatherForecastEntityViewSubscribers
+    arguments: ['@manifesto_weather.weather_manager']
+    tags:
+      - { name: event_subscriber }

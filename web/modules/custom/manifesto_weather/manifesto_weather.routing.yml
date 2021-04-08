@@ -1,0 +1,9 @@
+manifesto_weather.weather_api_form:
+  path: '/admin/config/manifesto-weather'
+  defaults:
+    _form: '\Drupal\manifesto_weather\Form\WeatherAPIForm'
+    _title: 'Weather API'
+  requirements:
+    _permission: 'manage weather api configuration'
+  options:
+    _admin_route: TRUE

@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains manifesto_weather.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function manifesto_weather_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the manifesto_weather module.
+    case 'help.page.manifesto_weather':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides weather information based on location.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function manifesto_weather_theme() {
+  return [
+    'manifesto_weather' => [
+      'variables' => [
+        'forecast' => NULL,
+      ],
+    ],
+  ];
+}
