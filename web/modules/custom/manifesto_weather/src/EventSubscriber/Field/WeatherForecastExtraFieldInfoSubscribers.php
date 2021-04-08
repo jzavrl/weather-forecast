@@ -45,8 +45,11 @@ class WeatherForecastExtraFieldInfoSubscribers implements EventSubscriberInterfa
    */
   public function fieldInfo(EntityExtraFieldInfoEvent $event): void {
     // Adds a new field into the entity.
+    $field_info = [
+      'label' => $this->t('Weather forecast'),
+    ];
     foreach (self::BUNDLES as $bundle) {
-      $event->addDisplayFieldInfo(self::ENTITY, $bundle, self::FIELD_NAME, []);
+      $event->addDisplayFieldInfo(self::ENTITY, $bundle, self::FIELD_NAME, $field_info);
     }
   }
 
