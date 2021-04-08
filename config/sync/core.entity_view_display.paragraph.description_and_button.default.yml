@@ -1,0 +1,35 @@
+uuid: 4e310589-32d5-462b-be7a-56a55da0b84a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_and_button.field_description
+    - field.field.paragraph.description_and_button.field_link
+    - paragraphs.paragraphs_type.description_and_button
+  module:
+    - link
+id: paragraph.description_and_button.default
+targetEntityType: paragraph
+bundle: description_and_button
+mode: default
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

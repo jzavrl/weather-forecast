@@ -1,0 +1,19 @@
+uuid: 671e9f44-f957-44f8-b9fb-7d374bfa21a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - node
+id: node.field_postcode
+field_name: field_postcode
+entity_type: node
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

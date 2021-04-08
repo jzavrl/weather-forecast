@@ -1,0 +1,19 @@
+uuid: b4760e53-f298-47a1-8bc5-d76422dba1b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.description_and_button
+id: paragraph.description_and_button.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: description_and_button
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
